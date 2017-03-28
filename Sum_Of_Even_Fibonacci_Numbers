@@ -1,0 +1,31 @@
+package project_euler;
+
+/**
+ * By considering the terms in the Fibonacci sequence
+ * whose values do not exceed four million,
+ * find the sum of the even-valued terms.
+ * @author Ira
+ */
+public class EvenFibonacciNumbers {
+
+	public static void main(String[] args) {
+		
+		int number_1 = 0,
+			number_2 = 1,
+			temp = 0, // for storing the next Fibonacci number
+			sum = 0;
+		
+		do {
+			if(number_2 % 2 == 0) { // if number_2 is even..
+				sum = sum + number_2; //..do this
+			}
+			temp = number_1 + number_2;
+			number_1 = number_2;
+			number_2 = temp;
+		} while(number_2 < 4000000);
+
+		System.out.println("Sum of the even Fibonacci numbers are: " +sum);
+		
+	} // main
+
+} // class
