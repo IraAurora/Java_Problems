@@ -1,0 +1,29 @@
+package project_euler;
+
+/**
+ * Find the sum of all the multiples of 3 or 5 below 1000
+ * @author Ira
+ */
+public class MultiplesOf3And5 {
+
+	public static void main(String[] args) {
+		
+		int sum_1 = 0, sum_2 = 0, sum_together;
+		
+		for(int i = 3; i < 1000; i += 3) {
+			sum_1 += i;
+		} // for
+		
+		for(int i = 5; i < 1000; i += 5) {
+			sum_2 += i;
+		} // for
+		
+		sum_together = sum_1 + sum_2;
+		
+		System.out.println("Sum of multiples of 3: " +sum_1 +"\n"
+							+"Sum of multiples of 5: " + sum_2 +"\n"
+							+"Sum of multiples together: " +sum_together);
+		
+	} // main
+
+} // class
